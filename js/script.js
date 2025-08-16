@@ -17,3 +17,26 @@ $(document).ready(function() {
     $("#btnCambiarTexto").click(function() {
         $("#descripcion").text("Este es un nuevo texto actualizado dinámicamente.");
     });
+
+    $("#formPerfil").submit(function(e) {
+        e.preventDefault();
+        let nombre = $("#nombre").val();
+        let correo = $("#correo").val();
+        let mensaje = $("#mensaje").val();
+
+        if(nombre === "" || correo === "" || mensaje === "") {
+            alert("Todos los campos son obligatorios.");
+            return;
+        }
+
+        let datos = {nombre, correo, mensaje};
+        localStorage.setItem("perfil", JSON.stringify(datos));
+        alert("Datos guardados correctamente.");
+    });
+
+    if(localStorage.getItem("perfil")) {
+        let datos = JSON.parse(localStorage.getItem("perfil"));
+        $("#nombre").val(datos.nombre);
+        $("#correo").val(datos.correo);
+        $("#mensaje").val(datos.mensaje);
+    }
