@@ -14,7 +14,7 @@
         <h2>Información Personal</h2>
         <h3>Datos Básicos</h3>
         
-        <img src="img/perfil.jpg" alt="Foto de perfil" id="fotoPerfil" class="img-thumbnail mb-3">
+        <img src="logo.jpg" alt="Foto de perfil" id="fotoPerfil" class="img-thumbnail mb-3">
         
         <p id="descripcion">Bienvenido a mi perfil. Aquí podrás ver información personal y actualizaciones.</p>
         
@@ -31,3 +31,37 @@
             <li>Interés 1</li>
             <li>Interés 2</li>
         </ul>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Alex Coc</td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td>25</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form id="formPerfil">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo:</label>
+                <input type="email" id="correo" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea id="mensaje" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
