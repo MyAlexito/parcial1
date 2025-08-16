@@ -11,3 +11,22 @@
         <button id="btnAPI" class="btn btn-primary">Obtener Mensaje</button>
         <div id="resultado" class="card mt-3 p-3"></div>
     </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#btnAPI").click(function() {
+            $.ajax({
+                url: "https://s1uplfovq4.execute-api.us-east-1.amazonaws.com/default/example",
+                type: "GET",
+                success: function(res) {
+                    $("#resultado").html("<h5>Mensaje del API:</h5><p>" + res.mensaje + "</p>");
+                },
+                error: function() {
+                    $("#resultado").html("<p>Error al obtener datos del API.</p>");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
