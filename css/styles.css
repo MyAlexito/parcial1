@@ -20,3 +20,24 @@ table {
 table:hover {
     transform: scale(1.02);
 }
+
+#fotoPerfil {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s;
+}
+
+#fotoPerfil:hover {
+    transform: scale(1.2);
+}
+
+/* Pseudo-elemento y pseudo-clase */
+h1::after {
+    content: " ★";
+    color: gold;
+}
+
+input:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
